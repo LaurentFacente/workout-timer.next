@@ -5,13 +5,15 @@ export interface WorkoutConfig {
 	seriesDuration: number; // secondes
 	restDuration: number; // secondes
 	exercises: string[];
+	remainingTime: number;
 }
 
 export const defaultWorkoutConfig: WorkoutConfig = {
 	totalExercises: 6,
 	seriesPerExercise: 4,
-	seriesDuration: 30, // secondes
-	restDuration: 120, // secondes
+	seriesDuration: 30,
+	restDuration: 120,
+	remainingTime: 0,
 	exercises: [
 		"Exercice 1",
 		"Exercice 2",

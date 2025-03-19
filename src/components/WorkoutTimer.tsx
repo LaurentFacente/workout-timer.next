@@ -71,6 +71,16 @@ const WorkoutTimer: React.FC<WorkoutTimerProps> = ({ config }) => {
 					exercises={config.exercises}
 					seriesPerExercise={config.seriesPerExercise}
 					progressPercentage={progressPercentage}
+					isResting={isResting}
+					remainingTime={
+						isResting
+							? config.restDuration
+							: currentExercise < config.totalExercises &&
+							  currentSeries < config.seriesPerExercise
+							? config.seriesDuration -
+							  (currentTime % (config.seriesDuration + config.restDuration))
+							: 0
+					}
 				/>
 			</div>
 
