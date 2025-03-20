@@ -2,8 +2,8 @@
 export interface WorkoutConfig {
 	totalExercises: number;
 	seriesPerExercise: number;
-	seriesDuration: number; // secondes
-	restDuration: number; // secondes
+	seriesDuration: number;
+	restDuration: number;
 	exercises: string[];
 	remainingTime: number;
 }

@@ -140,12 +140,12 @@ const CircularProgress: React.FC<CircularProgressProps> = ({
 												key={j}
 												className={`inline-block w-2 h-2 mx-1 rounded-full ${
 													isCompleted
-														? "bg-indigo-600" // Complété = bleu
+														? "bg-indigo-600"
 														: isResting && isCurrent
-														? "bg-orange-300 animate-pulse" // En repos et courant = orange avec pulse
+														? "bg-orange-300 animate-pulse"
 														: isCurrent
-														? "bg-blue-400 animate-pulse" // Courant (exercice) = bleu avec pulse
-														: "bg-gray-400" // Cas par défaut = gris
+														? "bg-blue-400 animate-pulse"
+														: "bg-gray-400"
 												}`}
 											/>
 										);

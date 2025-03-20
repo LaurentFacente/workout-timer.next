@@ -74,7 +74,9 @@ const WorkoutTimer: React.FC<WorkoutTimerProps> = ({ config }) => {
 					isResting={isResting}
 					remainingTime={
 						isResting
-							? config.restDuration
+							? config.restDuration -
+							  ((currentTime % (config.seriesDuration + config.restDuration)) -
+									config.seriesDuration)
 							: currentExercise < config.totalExercises &&
 							  currentSeries < config.seriesPerExercise
 							? config.seriesDuration -
